@@ -16,6 +16,15 @@ function render(state = store.Home) {
       ${Footer()}
   `;
   router.updatePageLinks();
+  afterRender();
+}
+
+// Dec 18th
+function afterRender() {
+  // add menu toggle to bars icon in nav bar
+  document.querySelector(".fa-bars").addEventListener("click", () => {
+    document.querySelector("nav > ul").classList.toggle("hidden--mobile");
+  });
 }
 
 router
@@ -32,8 +41,3 @@ router
     }
   })
   .resolve();
-
-// add menu toggle to bars icon in nav bar
-// document.querySelector(".fa-bars").addEventListener("click", () => {
-//   document.querySelector("nav > ul").classList.toggle("hidden--mobile");
-// });
