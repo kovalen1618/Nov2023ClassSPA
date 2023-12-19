@@ -10,7 +10,7 @@ export default links => html`
         `<li><a href="/${link.title}"
         title="${link.title}" data-navigo>${link.text}</a></li>`
     )
-    .join("")};
+    .join("")}
     </ul>
   </nav>
 `;
